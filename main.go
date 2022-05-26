@@ -32,5 +32,5 @@ func main() {
 	router := gin.Default()
 	router.GET("/albums", getAlbums)
 	router.GET("health", getHealth)
-	router.Run(":8000")
+	router.Run(":8080")
 }

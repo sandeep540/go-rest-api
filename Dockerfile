@@ -15,11 +15,11 @@ COPY --from=build-env /go/bin/app /
 
 ENV GIN_MODE=release                                                                                                      
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["/app"]
 
-# HEALTHCHECK CMD curl --fail http://localhost:8000/health || exit 1
+# HEALTHCHECK CMD curl --fail http://localhost:8080/health || exit 1
 
 # docker build -t rest-api .
 # docker run -d -p 8000:8000 --name rest-api-container rest-api
